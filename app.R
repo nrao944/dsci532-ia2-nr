@@ -424,17 +424,6 @@ app$callback(
         ggthemes::scale_color_tableau()
       ggplotly(p)  
     }
-    else if (xcol == "gdpPercap" & saal == 2007) {
-      p <- ggplot(gapminder, aes(x = year,
-                                 y = !!sym(xcol),
-                                 color = continent)) +
-        geom_line(stat = 'summary', fun = mean) + 
-        scale_y_continuous(labels = scales::comma)+
-        scale_x_continuous(breaks = c(1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007)) + 
-        scale_x_log10() + geom_vline(xintercept = 2007, linetype = "longdash") +
-        ggthemes::scale_color_tableau()
-      ggplotly(p)  
-    }
     else {
       p <- ggplot(gapminder, aes(x = year,
                                  y = !!sym(xcol),
