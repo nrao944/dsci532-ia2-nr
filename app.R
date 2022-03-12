@@ -8,6 +8,7 @@ library(dashBootstrapComponents)
 library(dashCoreComponents)
 library(ggplot2)
 library(purrr)
+library(ggthemes)
 
 app <- Dash$new(external_stylesheets = "https://codepen.io/chriddyp/pen/bWLwgP.css")
 
